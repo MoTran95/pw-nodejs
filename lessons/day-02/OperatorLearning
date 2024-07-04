@@ -1,0 +1,33 @@
+let myNumbe1 = 1;
+let myNumbe2 = 2;
+
+// 1. Right openrand and left Operand
+let result = myNumbe1 + myNumbe2;
+
+console.log('Total value ' + result);
+console.log('Total value ' , result);
+
+//String literal, backstrick
+console.log(`Total value: ${result}`);
+result = 5/2;
+console.log(`5 / 2 = ${result}`);
+console.log(`4 / 2 = ${4/2}`);
+console.log(`10 / 3 = ${10/2}`);
+
+//Rounding
+let roundingNearest = Math.round(9/2);
+console.log(`roundingNearest: ${roundingNearest}`);
+
+let roundingFloor = Math.floor(9/2);
+console.log(`roundingFloor: ${roundingFloor}`);
+
+let roundingCeli = Math.ceil(9/2);
+console.log(`roundingCeli: ${roundingCeli}`);
+
+result =  10/3; 
+let toFixedNumber = result.toFixed(3);
+console.log(`toFixedNumber: ${toFixedNumber}`);
+
+
+
+
