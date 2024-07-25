@@ -4,6 +4,18 @@ let i = 0;
 let j = 0;
 let mergedArr = [];
 for (let k = 0; k < arr01.length + arr02.length; k++) {
+    if (i === arr01.length) {
+        mergedArr[k] = arr02[j];
+        j++;
+        continue;
+    }
+
+    if (j === arr02.length) {
+        mergedArr[k] = arr01[i];
+        i++;
+        continue;
+    }
+
     if (arr01[i] < arr02[j]) {
         mergedArr[k] = arr01[i];
         i++;
