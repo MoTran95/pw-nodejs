@@ -48,6 +48,7 @@ function withdrawMoney(withdrawBalance, accountNumber, bankAccounts) {
     const currentAccount = findAccountNumber(accountNumber, bankAccounts);
     if (withdrawBalance <= 0) {
         console.log("Something went wrong. Please input a postitive number");
+        return;
     }
     if (currentAccount) {
         if (withdrawBalance <= currentAccount.balance) {
