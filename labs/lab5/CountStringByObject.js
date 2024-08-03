@@ -1,6 +1,6 @@
 let mystring = "Hello ban, tui ten Teo, ban cung cung ten Teo luon ah";
 
-let words = mystring.replace(/[,.]/g, '').split(' ')
+let words = mystring.replace(/[,.]/g, '').split(' ');
 
 let result = countWords(words);
 console.log(`The result ${JSON.stringify(result)}`);
