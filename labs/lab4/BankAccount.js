@@ -3,10 +3,10 @@ const bankAccountDream = {
     accountName: 'Dream',
     accountNumber: '123456789',
     routingNumber: '12345',
-    balance: 40000
+    balance: 40000,
 };
 
-const bankAccountBlue = JSON.parse(JSON.stringify(bankAccountDream));
+const bankAccountBlue = JSON.parse(JSON.stringify(bankAccountDream))
 bankAccountBlue.accountName = 'Blue';
 bankAccountBlue.accountNumber = '113114115';
 
@@ -42,7 +42,8 @@ function findAccountNumber(accountNumber, bankAccounts) {
             return bankAccount;
         }
     }
-    console.log("AccountNumber is not existing.")
+
+    console.log("AccountNumber is not existing.");
 }
 function withdrawMoney(withdrawBalance, accountNumber, bankAccounts) {
     const currentAccount = findAccountNumber(accountNumber, bankAccounts);
