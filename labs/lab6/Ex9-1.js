@@ -14,4 +14,9 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
         return fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`)
     })
     .then(response => response.json())
-    .then(json => console.log(json));
+    .then(json =>{
+        if (json.length > 0) {
+            return console.log(json);
+        }
+        console.log("The entered userID is incorrect");
+    })

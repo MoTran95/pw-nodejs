@@ -15,7 +15,10 @@ async function getPost() {
 async function getUserPost() {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`);
     const user = await response.json();
-    console.log(user);
+    if (user.length > 0){
+        return console.log(user);
+    }
+    console.log("The entered userID is incorrect");
 }
 
 async function run() {
