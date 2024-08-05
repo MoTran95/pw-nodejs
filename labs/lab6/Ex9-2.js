@@ -7,16 +7,16 @@ run();
 async function getPost() {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
     const post = await response.json();
-    if (post.userId == userId){
+    if (post.id &&post.userId == userId){
         return console.log(post);
     }
     console.log("The entered postID is incorrect");
 }
 async function getUserPost() {
     const response = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`);
-    const user = await response.json();
-    if (user.length > 0){
-        return console.log(user);
+    const posts = await response.json();
+    if (posts.length > 0){
+        return console.log(posts);
     }
     console.log("The entered userID is incorrect");
 }

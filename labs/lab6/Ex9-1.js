@@ -5,7 +5,7 @@ let postId = readline.question("Please input post id: ");
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
     .then(response => response.json())
     .then(json => {
-        if (json.userId == userId) {
+        if (json.id && json.userId == userId) {
             return console.log(json);
         }
         console.log("The entered postID is incorrect");
