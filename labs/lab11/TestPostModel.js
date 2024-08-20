@@ -1,6 +1,8 @@
 // TestPostModel.js
 const Post = require("./Post");
 const RequestHandler = require("./RequestHandler");
+const BASE_URL ='https://jsonplaceholder.typicode.com';
+const SLUG = '/posts';
 
 // Excution
 lab11();
@@ -12,7 +14,7 @@ async function lab11(){
     const postId = 1;
 
     // Create RequestHandler object
-    const requestHandler = new RequestHandler();
+    const requestHandler = new RequestHandler(BASE_URL,SLUG);
 
     // const post = ...
     const post = await requestHandler.printTargetPost(userId,postId);
