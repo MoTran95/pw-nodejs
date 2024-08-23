@@ -13,7 +13,6 @@ class RequestHandler {
         if (post) {
             return new Post(post.userId, post.id, post.title, post.body);
         }
-
     }
     // service method
     async printAllPosts(userId) {
