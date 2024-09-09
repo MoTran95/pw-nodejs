@@ -4,15 +4,16 @@ export class FTE extends Employee {
     constructor() {
         super(4000);
     }
-    printSalary(){
+    printSalary() {
         console.log(this.salary);
-        
-    }
-   
-    // getSupportSalary(){
-    //     return 1000;
-    // }
 
-    // Strongly force IS-A relationship -> Abstraction
+    }
+    // getter
+    getSalary(): number {
+        return 10000;
+    }
+    getSupportSalary(): number {
+        return 1000;
+    }
 
 }

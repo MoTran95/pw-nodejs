@@ -2,7 +2,6 @@ const Request = require("./Request");
 
 // child class / sub class / derived class
 class GetRequest extends Request {
-    // Overiding
     setMethod(){
         super.setMethod('POST');
     }

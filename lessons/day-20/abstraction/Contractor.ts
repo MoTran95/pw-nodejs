@@ -9,8 +9,12 @@ export class Contractor extends Employee {
         console.log(this.salary);
         
     }
-    getSupportSalary(){
-        return this.salary;
+    // getter
+    getSalary(): number {
+        return 10000;
+    }
+    getSupportSalary(): number {
+        return 1000;
     }
 
 }
